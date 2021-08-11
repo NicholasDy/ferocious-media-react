@@ -1,0 +1,433 @@
+/* Main CSS by Norman Pleitez @ Ferocious Media */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --primero: #6c297d;
+    --segundo: #568ac8;
+    --gris: #3d3d3d;
+    --plata: #f5f5f5;
+    --otroplata: #707070;
+    --funo: 'Raleway', sans-serif;
+    --fdos: 'Poppins', sans-serif;
+    --ftres: 'Oswald', sans-serif;
+}
+
+/* ===================================
+    1. Global CSS
+====================================== */
+
+* {
+    color: inherit;
+    outline: #fff solid 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+audio,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+mark,
+menu,
+meter,
+nav,
+output,
+progress,
+section,
+summary,
+time,
+video {
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+:focus,
+a:focus {
+    outline: none;
+}
+
+#root {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+body {
+    font-family: var(--funo);
+    font-size: 19px;
+    line-height: 1.5em;
+    font-weight: 500;
+    color: var(--gris);
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+p,
+a,
+span,
+small {
+    font-family: var(--funo);
+    color: var(--gris);
+    font-size: 19px;
+}
+
+body a {
+    text-decoration: none;
+    color: var(--segundo);
+    transition: color 0.2s linear;
+}
+
+body a:hover,
+body a:focus {
+    color: var(--segundo);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--funo);
+    margin: 0;
+    padding: 0;
+    line-height: 1.3em;
+}
+
+.vertical-align {
+    display: table;
+}
+
+.vertical-align > [class^='col-'],
+.vertical-align > [class*=' col-'] {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
+.home-body,
+.all-body {
+    padding-top: 0px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.box-wrapper,
+section {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: block;
+    padding: 70px 0;
+}
+
+.effect-hover {
+    transition: all 0.5s ease-out;
+}
+
+.effect-hover:hover {
+    transition: all 0.3s ease;
+}
+
+.green-bg {
+    background-color: var(--plata);
+    margin: 40px 0 0 !important;
+}
+
+.resources-pages .green-bg {
+    margin: 0 !important;
+}
+
+.over-green {
+    text-align: center;
+    color: var(--primero);
+    width: 60%;
+    margin: 0 auto;
+}
+
+.white-button {
+    display: flex;
+    justify-content: center;
+}
+
+.white-button a {
+    color: var(--gris);
+    background-color: #fff;
+    text-transform: uppercase;
+    margin-top: 40px;
+    font-family: var(--fdos);
+    padding: 10px 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-out;
+}
+
+.white-button a:hover {
+    color: #fff;
+    background-color: var(--primero);
+    padding: 10px 30px;
+    transition: all 0.2s ease-in;
+}
+
+.vv-subtitles h3 {
+    color: #fff;
+    font-size: 34px;
+    margin-top: 15px;
+}
+
+.top-internal-pages section h1 {
+    text-align: left;
+}
+
+.content-body {
+    white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 450px) {
+    .resources-pages .block-text-and-form .white-button {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .resources-pages .block-text-and-form .white-button a {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ===================================
+    2. Top Bar
+====================================== */
+.secondary-bar {
+    border-bottom-color: #ffffff;
+    position: relative;
+    border-bottom-style: solid;
+    z-index: 104;
+    padding: 19px 0;
+    box-shadow: 0px 0px 24px rgb(10 10 10 / 10%);
+    -webkit-box-shadow: 0px 0px 24px rgb(10 10 10 / 10%);
+    -moz-box-shadow: 0px 0px 24px rgba(10, 10, 10, 0.1);
+}
+
+.top-wrapper {
+    max-width: 1320px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.block-left {
+    display: block;
+}
+
+.block-right {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.block-left,
+.block-left a,
+.block-right a {
+    color: var(--primero);
+}
+
+.block-left a {
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.block-right a {
+    margin-left: 16px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 949px) {
+    .sub-titles h3 {
+        font-size: 38px;
+    }
+
+    .block-left {
+        line-height: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .block-left a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .primary-bar .top-wrapper .menu-container {
+        padding: 5px 0;
+    }
+
+    .block-left {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .block-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .phone {
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sub-titles h3 {
+        font-size: 32px;
+    }
+
+    .sub-titles-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .phone-title {
+        font-size: 16px;
+    }
+
+    .phone-number a {
+        font-size: 18px !important;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .block-wrap {
+        padding: 0 20px;
+    }
+    .phone {
+        width: 100%;
+    }
+
+    .phone svg {
+        display: none;
+    }
+
+    .phone-data {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .phone-title {
+        margin-right: 5px;
+    }
+
+    .block-left svg {
+        font-size: 16px;
+    }
+
+    .block-left a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .phone {
+        width: 100%;
+    }
+
+    .phone svg {
+        display: none;
+    }
+
+    .phone-data {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .phone-title {
+        margin-right: 5px;
+        font-size: 14px;
+    }
+
+    .phone-number a {
+        font-size: 15px !important;
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "fm-boilerplate",
+  "version": "1.0.0",
+  "description": "Ferocious Media Boilerplate to start all small websites",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Norman Pleitez @ Ferocious Media",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "handlebars": "^4.7.7",
+    "nodemailer": "^6.4.16",
+    "nodemailer-mailgun-transport": "^2.0.2"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
+}

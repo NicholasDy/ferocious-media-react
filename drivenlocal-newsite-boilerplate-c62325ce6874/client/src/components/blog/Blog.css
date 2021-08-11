@@ -1,0 +1,113 @@
+.blog-post-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--plata);
+}
+
+.blog-post-wrapper:nth-child(even) {
+    background-color: #fff;
+}
+
+.blog-post-wrapper a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    transform: scale(1);
+    transition: all 0.4s ease-in;
+}
+
+.post-info {
+    text-align: center;
+}
+
+.blog-post-wrapper h4 {
+    font-size: 20px;
+    text-align: center;
+    color: var(--primero);
+    transition: all 0.4s ease-in;
+}
+.blog-post-wrapper time {
+    font-size: 14px;
+    text-align: center;
+    color: var(--segundo);
+    transition: all 0.4s ease-in;
+}
+
+.blog-post-wrapper a:hover {
+    transform: scale(1.05);
+    transition: all 0.4s ease-out;
+}
+
+.blog-post-wrapper a:hover .post-image {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.4s ease-out;
+}
+
+.blog-post-wrapper .post-image {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    object-fit: cover;
+    display: flex;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.4s ease-in;
+}
+
+.blog-post-wrapper .post-image img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 800px) {
+    .blog-post-wrapper h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-post-wrapper h4 {
+        font-size: 28px;
+    }
+}
+
+.read-more-wrap {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.post-read {
+    background-color: var(--primero);
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 25px;
+    transition: all 0.2s ease-in;
+}
+
+.post-read:hover {
+    color: var(--primero);
+    box-shadow: 0 0px 10px -5px rgba(0, 0, 0, 0.8);
+    background-color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+.blog-post p {
+    margin-bottom: 20px;
+}
+
+.list-posts {
+    margin: 10px 0 40px;
+}
+
+.list-posts p {
+    font-size: 16px;
+}
