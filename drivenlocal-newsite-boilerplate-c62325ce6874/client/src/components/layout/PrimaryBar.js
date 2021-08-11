@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import Spinning from '../extras/Spinning';
 import MainMenu from './MainMenu';
+import TheLogo from '../../images/ferocious-media-small.jpg';
+
 
 const PrimaryBar = () => {
     const [pages, setPages] = useState();
@@ -44,7 +46,15 @@ const PrimaryBar = () => {
 
     return (
         <div id='navbar' className='primary-bar top-bar'>
+
             <div className='top-wrapper'>
+                <img
+                    src={TheLogo}
+                    alt='The Vascular Experts'
+                    className='footer-logo'
+                    width="100"
+                    height="100"
+                />
                 {loading ? (
                     <Spinning />
                 ) : (
@@ -55,22 +65,8 @@ const PrimaryBar = () => {
                         />
                     </Fragment>
                 )}
-                <div className='featured-button'>
-                    {pages &&
-                        pages.length > 0 &&
-                        pages.map(
-                            (it) =>
-                                it.title.rendered.startsWith('Contact') && (
-                                    <Link key={it.id} to={`/${it.slug}`}>
-                                        <span
-                                            dangerouslySetInnerHTML={{
-                                                __html: it.title.rendered,
-                                            }}
-                                        ></span>
-                                    </Link>
-                                )
-                        )}
-                </div>
+
+
             </div>
         </div>
     );

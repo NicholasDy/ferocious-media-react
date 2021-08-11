@@ -5,7 +5,6 @@ import axios from 'axios';
 
 // Parts
 import Spinning from '../extras/Spinning';
-import TheLogo from '../../images/ferocious-media-small.jpg';
 import { Fragment } from 'react';
 
 const Footer = () => {
@@ -55,21 +54,8 @@ const Footer = () => {
 
     return (
         <div className='footer'>
-            <section>
-                <Grid container spacing={7}>
-                    <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={2}
-                        style={{ textAlign: 'center' }}
-                    >
-                        <img
-                            src={TheLogo}
-                            alt='The Vascular Experts'
-                            className='footer-logo'
-                        />
-                    </Grid>
+            <div className="">
+                <Grid container spacing={7} className="footerdiv">
                     {loading ? (
                         <Spinning />
                     ) : (
@@ -164,9 +150,25 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className='featured-button'>
+                            {pages &&
+                                pages.length > 0 &&
+                                pages.map(
+                                    (it) =>
+                                        it.title.rendered.startsWith('Contact') && (
+                                            <Link key={it.id} to={`/${it.slug}`}>
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: it.title.rendered,
+                                                    }}
+                                                ></span>
+                                            </Link>
+                                        )
+                                )}
+                        </div>
                     </Grid>
                 </Grid>
-            </section>
+            </div>
             <div className='bottom-bar'>
                 <section>
                     <div className='bottom-extras'>
