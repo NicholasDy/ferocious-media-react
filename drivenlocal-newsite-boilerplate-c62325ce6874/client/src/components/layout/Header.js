@@ -7,8 +7,9 @@ import TopBar from './TopBar';
 const Header = () => {
     return (
         <div className='main-header'>
-            <TopBar />
             <PrimaryBar />
+            <TopBar />
+
         </div>
     );
 };
