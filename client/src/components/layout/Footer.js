@@ -54,8 +54,11 @@ const Footer = () => {
 
     return (
         <div className='footer'>
-            <div className="">
-                <Grid container spacing={7} className="footerdiv">
+            <div className="footerdiv">
+                <Grid
+                    container
+
+                    spacing={10}>
                     {loading ? (
                         <Spinning />
                     ) : (
@@ -101,7 +104,7 @@ const Footer = () => {
                             </Grid>
                         </Fragment>
                     )}
-                    <Grid item xs={12} sm={12} md={4}>
+                    <Grid item xs={12} sm={6} md={3}>
                         <h5>Hospital Hours</h5>
                         <div
                             className='gdlr-core-opening-hour-widget'
@@ -111,16 +114,14 @@ const Footer = () => {
                                 <span className='gdlr-core-head'>
                                     <i className='fal fa-clock'></i> Mon - Fri
                                 </span>
-                                <span className='gdlr-core-tail'>
-                                    8:00am - 5:00pm
-                                </span>
+                                <span className='gdlr-core-tail'> 8:00am - 5:00pm</span>
                             </div>
                             <div className='gdlr-core-opening-hour-widget-list line'>
                                 <span className='gdlr-core-head'>
                                     <i className='fal fa-times-circle'></i> Sat
                                     - Sun
                                 </span>
-                                <span className='gdlr-core-tail'>Closed</span>
+                                <span className='gdlr-core-tail'> Closed</span>
                             </div>
                             <div className='last-footer-widget'>
                                 <br />

@@ -1,7 +1,7 @@
 .footerdiv {
   display: flex;
   justify-content: space-evenly;
-  margin: 5%;
+  margin: 10%;
 }
 
 .class-grow {
